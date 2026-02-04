@@ -4,6 +4,14 @@
   "description": "React Native component: iOS Alert and custom Android Alert modal.",
   "main": "index.ts",
   "types": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AGLFlorida/react-native-crossplatform-alert.git"
+  },
+  "files": [
+    "index.ts",
+    "src"
+  ],
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",

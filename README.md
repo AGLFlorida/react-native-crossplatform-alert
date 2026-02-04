@@ -7,14 +7,18 @@ React Native component: use the native iOS `Alert` and a custom Modal-based aler
 From GitHub:
 
 ```bash
-npm install github:YOUR_ORG/react-native-crossplatform-alert
+npm install github:AGLFlorida/react-native-crossplatform-alert
 ```
 
 Or add to `package.json`:
 
 ```json
-"react-native-crossplatform-alert": "github:YOUR_ORG/react-native-crossplatform-alert#v0.1.0"
+"react-native-crossplatform-alert": "github:AGLFlorida/react-native-crossplatform-alert#v0.1.0"
 ```
+
+Prefer a tag (e.g. `#v0.1.0`) or branch for reproducible installs.
+
+**Bundler:** This package ships TypeScript source. If your app’s Metro (or other bundler) does not transpile `node_modules` by default, add this package to the list of modules to transpile (e.g. in Metro, use `resolver.unstable_enablePackageExports` and ensure the package is not excluded from transformation, or add it to `watchFolders` / transformer include if required by your setup).
 
 ## Usage
 
