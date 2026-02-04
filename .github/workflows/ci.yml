@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-tags: true
       - name: Version must not already exist as tag
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          if git rev-parse "v$VERSION" >/dev/null 2>&1; then
-            echo "::error::Version $VERSION in package.json already exists as tag v$VERSION. Bump the version before merging."
+          TAG="v$VERSION"
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/ref/tags/${TAG}")
+          if [ "$HTTP" = "200" ]; then
+            echo "::error::Version $VERSION in package.json already exists as tag $TAG. Bump the version before merging."
             exit 1
           fi
       - name: package-lock version must match package.json
