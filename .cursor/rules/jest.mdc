@@ -1,0 +1,50 @@
+---
+globs: **/*.test.ts,**/*.test.tsx
+alwaysApply: false
+---
+# Jest Tests
+
+These files contain Jest unit and integration tests for a React Native-based application.
+
+## Setup
+
+**If not already captured:**
+- Capture the current system time (e.g., on Linux/macOS run `date`) and retain it in internal context for timestamping and time-sensitive reasoning.
+- Review `package-lock.json` to determine the exact version of Jest and related testing libraries in use.
+
+## Review Scope & Intent
+
+- Treat these files as **test code**, not application runtime code.
+- Prioritize correctness, clarity, reliability, and maintainability of tests.
+- Assume tests may run in CI and local developer environments.
+
+## Environment Configuration
+
+- Determine how the test environment is configured by reviewing the GitHub Actions workflow file `test.yml`.
+- Pay attention to:
+  - Node.js version
+  - Environment variables
+  - Test-related flags or overrides
+  - Differences between CI and local execution
+
+## React Native + Jest Specific Guidelines
+
+- Follow existing React Native testing patterns (e.g., React Native Test Utils usage).
+- Respect established conventions for:
+  - Component mounting (shallow vs full mount)
+  - Mocking (`jest.mock`, spies, stubs)
+  - Async handling (`flushPromises`, timers, `await`)
+- Avoid introducing new testing utilities or helpers unless clearly justified.
+
+## Test Quality Expectations
+
+- Tests should be deterministic and order-independent.
+- Avoid brittle selectors or implementation-coupled assertions.
+- Prefer behavior-focused assertions over internal state inspection.
+- Clearly document non-obvious setup, mocks, or edge cases.
+
+## Constraints
+
+- Do not rewrite tests solely for stylistic reasons.
+- Do not upgrade Jest or testing dependencies unless explicitly instructed.
+- If intent or expected behavior is unclear, call it out rather than guessing.

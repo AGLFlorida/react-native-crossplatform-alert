@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "noEmit": true
+  },
+  "include": ["src", "index.ts", "**/*.test.ts", "**/*.test.tsx", "__mocks__"]
+}

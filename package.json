@@ -1,0 +1,43 @@
+{
+  "name": "react-native-crossplatform-alert",
+  "version": "0.1.0",
+  "description": "React Native component: iOS Alert and custom Android Alert modal.",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "keywords": [
+    "react-native",
+    "alert",
+    "android",
+    "modal"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.12",
+    "@types/react-test-renderer": "^18.3.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.12.0",
+    "jest": "^29.7.0",
+    "react": "^18.3.1",
+    "react-native": "^0.76.0",
+    "react-test-renderer": "^18.3.1",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  }
+}
